@@ -1,0 +1,12 @@
+@use './abstracts/abstracts' as *;
+
+main {
+  height: 100vh;
+  width: 100vw;
+  padding: $default-padding;
+  display: flex;
+  gap: 5rem;
+  @include respond(nav-btn) {
+    gap: 0;
+  }
+}

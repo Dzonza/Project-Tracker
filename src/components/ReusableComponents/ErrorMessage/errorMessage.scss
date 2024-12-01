@@ -1,0 +1,12 @@
+@use '/src/abstracts/abstracts' as *;
+
+.add-inputs {
+  color: $color-error-red;
+  font-size: $default-font-size;
+}
+.error-task-message {
+  color: $color-error-red;
+  font-size: $default-font-size;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}

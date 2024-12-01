@@ -1,0 +1,17 @@
+@use '/src/abstracts/abstracts' as *;
+
+.edit-project {
+  &__project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: $color-black;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+  }
+  &__title {
+    font-family: 'Madimi One', serif;
+    font-size: 3.5rem;
+  }
+}

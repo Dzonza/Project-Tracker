@@ -1,0 +1,75 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == min-phone {
+    // 380px
+    @media only screen and (max-width: 23.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    // 600px
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == nav-btn {
+    //800px
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    //900px
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    //1250px
+    @media only screen and (max-width: 78em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    //1800px
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin container-template($bg-color, $border, $padding) {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  background-color: $bg-color;
+  border-radius: $border;
+  padding: $padding;
+}
+
+@mixin label-tag {
+  align-self: flex-start;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  font-weight: 500;
+}
+@mixin inputs-textarea($border-radius, $color) {
+  padding: 1.5rem;
+  max-width: 40rem;
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  &:focus {
+    outline-color: $color;
+  }
+}
+
+@mixin edit-actions($color, $transition) {
+  height: 1.5rem;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    color: $color;
+  }
+}

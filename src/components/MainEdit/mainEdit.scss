@@ -1,0 +1,8 @@
+@use '/src/abstracts/abstracts' as *;
+
+.mainEdit-container {
+  width: 75%;
+  @include respond(nav-btn) {
+    width: 100%;
+  }
+}

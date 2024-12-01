@@ -1,0 +1,30 @@
+@use '/src/abstracts/abstracts' as *;
+
+.add-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 18rem;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  font-size: $font-size-default;
+  background-color: $color-green-light;
+  color: $color-black;
+  border-radius: $border-radius;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  cursor: pointer;
+  transition: $default-transition;
+  &:hover {
+    transform: translateY(-0.5rem);
+    background-color: $color-green;
+    color: $color-white;
+  }
+  &:active {
+    transform: translateY(-0.2rem);
+  }
+  &__plus-icon {
+    height: 1.5rem;
+  }
+}

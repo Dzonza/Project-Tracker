@@ -1,0 +1,23 @@
+@use '/src/abstracts/abstracts' as *;
+
+.project-delete-btn {
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  padding: 1rem 2rem;
+  border-radius: $border-radius;
+  border: none;
+  background-color: $color-error-red-light;
+  color: $color-black;
+  cursor: pointer;
+  transition: $default-transition;
+  @include respond(nav-btn) {
+    right: 2rem;
+    top: 2rem;
+  }
+  &:hover {
+    color: $color-white;
+    background-color: $color-error-red;
+    box-shadow: $box-shadow-default;
+  }
+}

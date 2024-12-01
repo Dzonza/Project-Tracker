@@ -1,0 +1,23 @@
+@use '/src/abstracts/abstracts' as *;
+
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  @include respond(min-phone) {
+    width: 100%;
+  }
+
+  &__label {
+    @include label-tag;
+  }
+  &__textarea {
+    @include inputs-textarea($border-radius, $color-blue-hover);
+    max-height: 15rem;
+    min-height: 5rem;
+    overflow: hidden;
+    min-width: 40rem;
+    @include respond(min-phone) {
+      min-width: 100%;
+    }
+  }
+}

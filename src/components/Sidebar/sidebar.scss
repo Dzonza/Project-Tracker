@@ -1,0 +1,55 @@
+@use '/src/abstracts/abstracts' as *;
+
+.sidebar-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: $default-gap;
+  @include container-template($color-white, $border-radius, $default-padding);
+}
+
+.burger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  width: 0%;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: $default-transition;
+}
+
+.burger-menu-icon {
+  position: absolute;
+  top: 6rem;
+  left: 4rem;
+  height: 2.5rem;
+  transition: $default-transition;
+  z-index: 50;
+  color: $color-black;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.burger-menu-cancel {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 2.5rem;
+  transition: $default-transition;
+  color: $color-black;
+  &:hover {
+    color: $color-error-red;
+  }
+}
+
+.burger-menu-open {
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+}

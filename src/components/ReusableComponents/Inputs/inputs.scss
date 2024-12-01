@@ -1,0 +1,33 @@
+@use '/src/abstracts/abstracts' as *;
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  @include respond(min-phone) {
+    width: 100%;
+  }
+
+  &__input {
+    padding: 1.5rem;
+    width: 40rem;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-default;
+    @include respond(min-phone) {
+      width: 100%;
+    }
+    &:focus {
+      outline-color: $color-blue-hover;
+    }
+  }
+  &__label {
+    @include label-tag;
+  }
+}
+
+.edit-input {
+  &__input {
+    padding: 0.5rem;
+    outline: none;
+  }
+}
