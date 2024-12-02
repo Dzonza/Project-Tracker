@@ -41,12 +41,21 @@ const DisplayProjects = ({ setBurgerMenuOpen }) => {
   }, [isFiltered, dispatch]);
 
   const handleProjectClick = useCallback(
-    (id) => {
+    (e, id) => {
       dispatch(openEditProject(id));
       dispatch(closeAddProject());
       dispatch(closeHome());
       dispatch(startFilterTasks());
       setBurgerMenuOpen(false);
+      const selectedProject = e.target;
+      const parentEl = e.target
+        .closest('.display-projects')
+        .querySelectorAll('.display-projects__project');
+      parentEl.forEach((project) => {
+        if (project !== selectedProject)
+          project.classList.remove('selected-project');
+      });
+      selectedProject.classList.add('selected-project');
     },
     [dispatch, setBurgerMenuOpen]
   );
@@ -58,7 +67,7 @@ const DisplayProjects = ({ setBurgerMenuOpen }) => {
               <p
                 key={project.id}
                 className="display-projects__project"
-                onClick={() => handleProjectClick(project.id)}
+                onClick={(e) => handleProjectClick(e, project.id)}
               >
                 {handleTitleDisplay(project.title)}
               </p>

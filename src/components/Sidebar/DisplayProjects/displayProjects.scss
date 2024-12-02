@@ -31,7 +31,12 @@
       transform: scale(1.1);
       color: $color-white;
       background-color: $color-blue;
-      border: none;
     }
   }
+}
+
+.selected-project {
+  transform: scale(1.1);
+  color: $color-white;
+  background-color: $color-blue;
 }
